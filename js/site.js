@@ -31,7 +31,7 @@ i18n.init({ fallbackLng: onOSMlang, postAsync: 'false' }, function() {
 /* HERE BE DRAGONS */
 var findme_map = L.map('findme-map')
     .setView([41.69, 12.71], 5),
-    osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     osm = L.tileLayer(osmUrl, {minZoom: 2, maxZoom: 18, attribution: "Data &copy; OpenStreetMap contributors"}).addTo(findme_map),
     esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
 
