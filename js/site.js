@@ -104,7 +104,7 @@ $("#find").submit(function(e) {
         format: 'json',
         q: address_to_find
     };
-    var url_nominatim = "http://nominatim.openstreetmap.org/search?" + $.param(qwarg_nominatim);
+    var url_nominatim = "https://nominatim.openstreetmap.org/search?" + $.param(qwarg_nominatim);
 
     
     $("#findme h4").text(loadingText);
@@ -200,6 +200,7 @@ $("#collect-data-done").click(function() {
         if ($("#addressalt").val()) note_body += i18n.t('step2.addressaltdesc')+": " + $("#addressalt").val() + "\n";
         if ($("#payment").val()) note_body += i18n.t('step2.payment')+": " + $("#payment").val() + "\n";
         if ($("#delivery").val()) note_body += i18n.t('step2.delivery')+": " + $("#delivery").val() + "\n";
+        if ($("input:checked[name=delivery_covid]").val() === 'Y') note_body += "delivery:covid19=yes\n";
     var latlon = findme_marker.getLatLng();
     var qwarg = {
             lat: latlon.lat,
@@ -207,10 +208,10 @@ $("#collect-data-done").click(function() {
             text: note_body
         };
 
-    $.post('http://api.openstreetmap.org/api/0.6/notes.json', qwarg, function( data ) {
+    $.post('https://api.openstreetmap.org/api/0.6/notes.json', qwarg, function( data ) {
         console.log( data );
         var noteId=data['properties']['id'];
-        var link='http://www.openstreetmap.org/?note='+noteId+'#map=19/'+latlon.lat+'/'+latlon.lon+'&layers=N';
+        var link='https://www.openstreetmap.org/?note='+noteId+'#map=19/'+latlon.lat+'/'+latlon.lon+'&layers=N';
           $("#linkcoords").append('<a href="'+link+'">'+link+'</a>');
     });
 });
