@@ -267,11 +267,6 @@ function getNoteBody() {
   if ($("#delivery_description").val()) note_body += "delivery:description=" + $("#delivery_description").val() + "\n";
   if ($("input:checked[name=takeaway]").val() != "undefined") note_body += "takeaway=" + $("input:checked[name=takeaway]").val() + "\n";
   if ($("#takeaway_description").val()) note_body += "takeaway:description=" + $("#takeaway_description").val() + "\n";
-  if ($("input:checked[name=delivery_covid]").val() === 'Y') note_body += "delivery:covid19=yes\n";
-  if ($("input:checked[name=takeaway_covid]").val() == "yes" || $("input:checked[name=takeaway_covid]").val() == "only") note_body += "takeaway:covid19=" + $("input:checked[name=takeaway_covid]").val() + "\n";
-  if ($("#delivery_covid_description").val() || $("#takeaway_covid_description").val()) note_body += "description:covid19=";
-  if ($("#delivery_covid_description").val()) note_body += $("#delivery_covid_description").val() + " ";
-  if ($("#takeaway_covid_description").val()) note_body += $("#takeaway_covid_description").val() + "\n";
   return note_body;
 }
 
