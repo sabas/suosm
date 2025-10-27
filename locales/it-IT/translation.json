@@ -82,6 +82,6 @@
   "modalButton": "Chiudi",
   "modalTitle": "Classificazione dell'accessibilità in sedia a rotelle",
   "needsChecking": "richiede controllo",
-  "credits": "Un progetto open source sviluppato dalla comunità mondiale di <a href=\"https://www.openstreetmap.org/\" class=\"badge badge-info\">OpenStreetMap</a> <i class=\"twa twa-globe-with-meridians\"></i>. Contribuisci a questo progetto su <a href=\"https://github.com/sabas/suosm\" class=\"badge badge-dark\">GitHub</a>."
+  "credits": "Un progetto open source sviluppato dalla comunità mondiale di <a href=\"https://www.openstreetmap.org/\" class=\"badge badge-info\">OpenStreetMap</a> <i class=\"twa twa-globe-with-meridians\"></i>. Contribuisci a questo progetto su <a href=\"https://github.com/sabas/suosm\" class=\"badge badge-dark\">GitHub</a>. <i class=\"twa twa-check-box-with-check\"></i> Sei un mappatore? Revisiona le note aperte su <a href=\"https://ent8r.github.io/NotesReview/?view=map&query=su.openstreetmap.it\">Notes Review</a>."
   }
 }
